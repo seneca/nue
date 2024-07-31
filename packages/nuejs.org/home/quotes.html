@@ -1,6 +1,6 @@
 <ul @name="quotes" class="quotes">
   <li :for="el in quotes" class="card from-{ el.from || 'x' }">
-    <a :if="el.user" href="//{ el.url || getUrl(el) }">@{ el.user }</a>
+    <a :if="el.user" href="{ el.url || getUrl(el) }">@{ el.user }</a>
     <a :else href="#status">Feedback</a>
     <p>{ el.text }</p>
   </li>
@@ -10,8 +10,8 @@
     }
 
     getUrl({ url, user, id, from }) {
-      return from == 'hn' ? `news.ycombinator.com/item?id=${id}` :
-        `twitter.com/${user}/status/${id}`
+      return from == 'hn' ? `//news.ycombinator.com/item?id=${id}` :
+        `//twitter.com/${user}/status/${id}`
     }
   </script>
 </ul>

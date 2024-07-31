@@ -20,7 +20,7 @@ function prettyDate(date) {
 
 export function renderPrettyDate(date) {
   if (!date) date = new Date()
-  if (!date.getDate) date = new Date(date)
+  else if (!date.getDate) date = new Date(date)
   return elem('time', { datetime: date.toISOString() }, prettyDate(date))
 }
 
@@ -29,8 +29,7 @@ export function renderPage(page) {
   const { title, desc, url } = page
 
   // date
-  let date = page.date || page.pubDate || new Date()
-  if (!date.getDate) date = new Date(date)
+  const date = page.date || page.pubDate || new Date()
 
   const is_new = isNew(date)
   const time = renderPrettyDate(date)
