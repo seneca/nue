@@ -1,4 +1,3 @@
-
 ---
 title: Because web development used to be *FUN!*
 desc: Why I'm building a complete frontend ecosystem from scratch

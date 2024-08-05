@@ -1,4 +1,3 @@
-
 ---
 date: 2024-01-23
 title: The perfect web framework for UX developers
@@ -9,7 +8,7 @@ og: /img/perfect-banner-big.jpg
 
 In June 2023 I had my final frontend rage quit moment. The anger was so intense that I decided to change the direction of my career from a startup founder to a full-time OSS developer. I would devote all my time to fixing everything that is wrong with the current front-end ecosystem.
 
-I created a [project on GitHub](https://github.com/nuejs/nue) and called it **"Nue"**. I wanted it to be the best web framework for for [UX developers](//css-tricks.com/the-great-divide/) and design-led organizations. It'll consist of following:
+I created a [project on GitHub](//github.com/nuejs/nue) and called it **"Nue"**. I wanted it to be the best web framework for [UX developers](//css-tricks.com/the-great-divide/) and design-led organizations. It'll consist of the following:
 
 
 [image]
@@ -76,7 +75,7 @@ The same "motherf**king" performance levels and the same pixel-perfect look and 
 ## Instant development loop `DX` { #devloop }
 A perfect framework should show a live preview of your change after you save a file. Be it content, styling, layout, server component, or client-side reactive component — you should see the change immediately. And if you make a mistake, the framework will tell you exactly what went wrong.
 
-This kind of _universal hot-reloading_ offers a true WYSIWYG experience for content producers, designers, and developers. Instant development loop gives a significant boost to your daily productivity.
+This kind of *universal hot-reloading* offers a true WYSIWYG experience for content producers, designers, and developers. Instant development loop gives a significant boost to your daily productivity.
 
 
 [.problem]
@@ -86,7 +85,7 @@ This kind of _universal hot-reloading_ offers a true WYSIWYG experience for cont
 ## Easy to scale `DX` { #scale }
 An ideal framework lets people with different backgrounds take part in scaling the system. Content teams scale the content, UX engineers focus on design and user experience, and JS developers work on the business model, networking, and infrastructure.
 
-They use the same system for content-focused apps and single-page apps and enjoy the productivity boost from universal hot-reloading. They share components and design elements so they can move faster and keep things consistent.
+They use the same system for content-focused apps and single-page apps and enjoy the productivity boost from universal hot-reloading. They share components and design elements, so they can move faster and keep things consistent.
 
 [.problem]
   Vite and **React** place all the burden on the JavaScript developer. They develop React components where content, styling, and logic are all mixed. Scaling becomes hard when content teams and UX developers cannot participate. And if you use different systems for blogging, documentation, and single-page apps – extra developer time is spent on keeping the external services together.

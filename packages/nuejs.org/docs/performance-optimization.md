@@ -21,7 +21,7 @@ Inline CSS means that the CSS code is packaged together with the HTML so that th
 
 You can enable CSS inlining on the page's front matter as follows:
 
-```
+```yaml
 inline_css: true
 ```
 
@@ -34,7 +34,7 @@ This causes your pages to load significantly faster, and the page is transitione
 
 You can enable view transitions globally in the `site.yaml` file:
 
-```
+```yaml
 view_transitions: true
 ```
 

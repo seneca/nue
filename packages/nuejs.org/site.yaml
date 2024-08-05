@@ -49,7 +49,7 @@ header:
       class: github badge
 
 burger_menu:
-  - Home: /home/
+  - Home: /
   - Docs: /docs/
   - Blog: /blog/
   - ---

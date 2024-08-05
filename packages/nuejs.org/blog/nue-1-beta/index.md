@@ -1,9 +1,8 @@
-
 ---
 hero_title: "Announcing *Nue 1.0-beta*"
 ---
 
-Exactly one year ago I [decided](/blog/backstory/) to create the absolute _slickest_ website generator in the world. Today is the day — the vision becomes reality:
+Exactly one year ago I [decided](/blog/backstory/) to create the absolute *slickest* website generator in the world. Today is the day — the vision becomes reality:
 
 [image.larger]
   small: /img/og-blue.png
@@ -44,13 +43,13 @@ Nue has always had the content-first idea of assembling .., but with this releas
 
 GDS defines what Nue is. It allows you to Use the same exact layout but, ...
 
-Think this as modern-day [CSS Zen Garden](//www.csszengarden.com/) where... A more familiar concept is Markdown: it always gives the same  HTML, but you can alter how it looks with CSS. Nue takes this idea and turns it into a rapid web application development environment with the following new features:
+Think this as modern-day [CSS Zen Garden](//www.csszengarden.com/) where... A more familiar concept is Markdown: it always gives the same HTML, but you can alter how it looks with CSS. Nue takes this idea and turns it into a rapid web application development environment with the following new features:
 
-* standardized page layout
-* headers, footers, "burger menus", and custom navigational components can now be defined without
-* A new <navi/> tag to use the descriptive ..
-* custom layouts for defining..
-* <page-list/>, <toc/>, less HTML/JavaScript, and more CSS even with
+- standardized page layout
+- headers, footers, "burger menus", and custom navigational components can now be defined without
+- A new <navi/> tag to use the descriptive ..
+- custom layouts for defining..
+- <page-list/>, <toc/>, less HTML/JavaScript, and more CSS even with
 
 
 **Brad Frost**, a famous UX developer and the man behind the idea [says][gds]:
@@ -63,10 +62,9 @@ The global design system allows you to build modern websites with nothing but CS
 ### CSS theming system
 This version improves Nue's CSS framework with the following features to make it an ideal companion for styling the standardized layouts on the global design system:
 
-* Lightning CSS enabled by default
-* New Library folders with include
-* Eexclude property to
-*
+- Lightning CSS enabled by default
+- New Library folders with include
+- Eexclude property to
 
 
 
@@ -74,7 +72,7 @@ This version improves Nue's CSS framework with the following features to make it
 Great CSS support,
 
 
-``` css.pink
+```css.pink
 article {
 > view-transition-name: article;
 }
@@ -88,7 +86,7 @@ article {
 
 Unexplored area, together with @starting-style
 
-``` css.blue
+```css.blue
 .hero {
   /* sidebar */
   @starting-style {
@@ -103,8 +101,7 @@ To build .. with GDS
 
 ! UX development category floating
 
-*
-* CSS best practices
+- CSS best practices
 
 
 ### Dynamic sections and grid items
@@ -112,8 +109,8 @@ To build .. with GDS
 
 
 ### 99% freeform folder structure
-* no hardcoded app.yaml, layout.yaml, main.js
-* any .data file, any .js file (no main.js), any .html file,
+- no hardcoded app.yaml, layout.yaml, main.js
+- any .data file, any .js file (no main.js), any .html file,
 
 
 [image.purple]
@@ -123,10 +120,10 @@ To build .. with GDS
 
 ## Smaller updates
 
-* .nue --> .htm
-* pubDate -> date
-* inline SVG support
-* list all new configuration options...
+- .nue --> .htm
+- pubDate --> date
+- inline SVG support
+- list all new configuration options...
 
 
 ## Breaking changes
@@ -134,14 +131,14 @@ This version not backwards compatible.
 Semver in action after 1.0 is out. Before that "practical versioning"
 
 
-* [glow] --> pre
-* dropped icon tag
-* always figure tag
-* css.className creates a wrapping element
-* code wrapper not supported. provide with `[code.<className>]`
-* always draw_sections, no <section/> tags elsewhere
-* css_2023 --> css_nesting
-* [active] --> [aria-selected]
+- [glow] --> pre
+- dropped icon tag
+- always figure tag
+- css.className creates a wrapping element
+- code wrapper not supported. provide with `[code.<className>]`
+- always draw_sections, no `<section>` tags elsewhere
+- css_2023 --> css_nesting
+- [active] --> [aria-selected]
 
 
 ## New website
@@ -157,8 +154,8 @@ Unsurprisingly, the biggest job was the documentaion area, which now focuses on 
 ## Towards 1.0 stable
 Feedback: global design system HTML, part of Open UI,
 
-* create-nue / onboarding
-* view-transition is a fundamental feature and very much defines what Nue is. dom diffing, CSS examples, API docs,
+- create-nue / onboarding
+- view-transition is a fundamental feature and very much defines what Nue is. dom diffing, CSS examples, API docs,
 
 
 

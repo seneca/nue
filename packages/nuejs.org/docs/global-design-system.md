@@ -1,7 +1,6 @@
 
-
 # Global Design System
-Nue's power leans heavily on a thing called _global design system_. It allows UX developers to rapidly create different designs using the same exact markup between projects:
+Nue's power leans heavily on a thing called *global design system*. It allows UX developers to rapidly create different designs using the same exact markup between projects:
 
 [image.gridpaper]
   small: /img/global-design-system.png
@@ -21,10 +20,10 @@ Nue lets you assemble rich web pages without touching a single line of code. Ins
 
 [image.bordered /img/page-layout.svg width="600"]
 
-You can also [customize the layout](](custom-layouts.html)) with a minimal amount of HTML for all the different page types you may have like landing pages, blog entries, and technical documentation.
+You can also [customize the layout](custom-layouts.html) with a minimal amount of HTML for all the different page types you may have like landing pages, blog entries, and technical documentation.
 
 
-Once the HTML layout is in place, your work is to [style it with CSS](css-best-practices.html) and perfect the user experience with [motion and reactivity ](reactivity.html)
+Once the HTML layout is in place, your work is to [style it with CSS](css-best-practices.html) and perfect the user experience with [motion and reactivity](reactivity.html).
 
 
 ### Standardized content
@@ -51,7 +50,7 @@ The standardized layout is coupled with a powerful system to rapidly create diff
 
 4. **Best practices** Nue offers [tips and recipes](css-best-practices.html) for writing reusable CSS that is easy to manage and scale. You typically end up with 10-100 times less code than in a traditional JavaScript-powered system.
 
-5. **Optimization** Nue comes with a unique [performance optimization](performance-optimization.html)] system that minifies your CSS for production, and packages your CSS and HTML together into one, compact deliverable:
+5. **Optimization** Nue comes with a unique [performance optimization](performance-optimization.html) system that minifies your CSS for production, and packages your CSS and HTML together into one, compact deliverable.
 
 
 

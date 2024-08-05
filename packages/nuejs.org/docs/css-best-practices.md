@@ -1,5 +1,4 @@
 
-
 # Nue CSS best practices
 This document describes the best practices for writing clean CSS that is easy to maintain and scale. This is a result of decades of coding with CSS and HTML.
 
@@ -14,12 +13,12 @@ The key take from this document can be squeezed into one sentence:
 This website and Nue itself are a great demonstration of minimalism and it all comes from practicing the following.
 
 1. Respect constraints
-1. Write clean HTML and CSS
-1. Write reusable CSS code
-1. Avoid inline styling
-1. Learn modern CSS
+2. Write clean HTML and CSS
+3. Write reusable CSS code
+4. Avoid inline styling
+5. Learn modern CSS
 
-These are all described in this document. Once you harness the power of CSS you are able to [build entire websites](/blog/introducing-nue-css/) with the same amount of CSS code as a _single_ Tailwind button has.
+These are all described in this document. Once you harness the power of CSS, you are able to [build entire websites](/blog/introducing-nue-css/) with the same amount of CSS code a *single* Tailwind button has.
 
 
 ## Respect constraints { #constraints }
@@ -27,16 +26,16 @@ Limit yourself to as few fonts, font weights, colors, variables, elements, class
 
 1. **Easier to adopt** — A simple design system is easier to adopt and use. The fewer variables and components you have, the harder it is to mess things up.
 
-1. **More creativity** — By narrowing the possibilities you allow for the quicker production of work and encourage developers to make creative combinations with the available options. With no limits, there are unlimited possibilities, similar to the effect a blank paper can have.
+2. **More creativity** — By narrowing the possibilities you allow for the quicker production of work and encourage developers to make creative combinations with the available options. With no limits, there are unlimited possibilities, similar to the effect a blank paper can have.
 
-1. **Better consistency** — If engineers can "do anything", they definitely use their creative freedom to work against your design system. But when they can only use the stuff available you'll ensure the design goes as planned.
+3. **Better consistency** — If engineers can "do anything", they definitely use their creative freedom to work against your design system. But when they can only use the stuff available you'll ensure the design goes as planned.
 
-1. **Long-lasting products** — Simple things last longer. The design decisions you make early on have long-lasting implications. Keep your design system simple and you are rewarded with great design and easily maintainable CSS code that lasts for future generations.
+4. **Long-lasting products** — Simple things last longer. The design decisions you make early on have long-lasting implications. Keep your design system simple and you are rewarded with great design and easily maintainable CSS code that lasts for future generations.
 
 
 #### Links
-* [Figma: Constraints in design](//www.figma.com/resource-library/constraints-in-design/)
-* [LogRocket: Design constraints: Why they’re actually useful](//blog.logrocket.com/ux-design/design-constraints-why-they're-useful/)
+- [Figma: Constraints in design](//www.figma.com/resource-library/constraints-in-design/)
+- [LogRocket: Design constraints: Why they’re actually useful](//blog.logrocket.com/ux-design/design-constraints-why-theyre-useful/)
 
 
 
@@ -59,8 +58,8 @@ Name the files in such a way that everyone can easily guess what's inside the fi
 
 
 #### Links
-* [Oreilly: Classifying Different Types of Styles](https://www.oreilly.com/library/view/css-refactoring/9781491978528/ch04.html)
-* [Sparkbox: The Anatomy of a Design System](//sparkbox.com/foundry/design_system_makeup_design_system_layers_parts_of_a_design_system)
+- [O'Reilly: Classifying Different Types of Styles](//www.oreilly.com/library/view/css-refactoring/9781491978528/ch04.html)
+- [Sparkbox: The Anatomy of a Design System](//sparkbox.com/foundry/design_system_makeup_design_system_layers_parts_of_a_design_system)
 
 
 
@@ -83,7 +82,7 @@ Place all area-specific CSS here. For example, a documentation area could set up
 Place all page-specific CSS under the leaf folder, where the `index.md` file resides. These styles are only available for that single page only and are not used anywhere else.
 
 #### More info:
-* [MDN: Cascade, specificity, and inheritance](//developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [MDN: Cascade, specificity, and inheritance](//developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 
 
 
@@ -94,7 +93,7 @@ Place all page-specific CSS under the leaf folder, where the `index.md` file res
 One hugely important thing in the global design system is that you always know the exact [page layout](page-layout.html) you are styling. This allows you to take advantage of the global scope and use the simplest CSS selectors possible without worrying about conflicts.
 
 
-``` css
+```css
 h1 { ... }
 h2 { ... }
 p  { ... }
@@ -104,7 +103,7 @@ a  { ... }
 If you want to vary the styling between the global elements and the bulk of the code this is trivial to do with CSS nesting:
 
 
-``` css
+```css
 /* navigation stuff always in nav scope */
 nav {
   a  { ... }
@@ -166,7 +165,7 @@ Always find ways to extract reusable pieces from your CSS code. For example, the
 Here, the component was broken into two pieces: a highly re-usable "card" component and a notification-specific "notification" component:
 
 
-```
+```css
 /* styles for all cards */
 .card {
   box-shadow: 0 0 2em #0001;
@@ -188,7 +187,7 @@ Now the "card" class can be applied to any element or component you desire reduc
 
 
 #### Links:
-[Nicolas Gallagher: Compomnent Modifiers](//nicolasgallagher.com/about-html-semantics-front-end-architecture/#component-modifiers)
+[Nicolas Gallagher: Component Modifiers](//nicolasgallagher.com/about-html-semantics-front-end-architecture/#component-modifiers)
 
 
 
@@ -219,17 +218,17 @@ This brings more benefits than you could imagine:
 
 1. **Easier to maintain** — clean HTML and CSS are easier to read, write, teach, share, and maintain.
 
-1. **Less code to write** — external CSS leads to [maximum reuse](#reuse) and minimal duplication of code.
+2. **Less code to write** — external CSS leads to [maximum reuse](#reuse) and minimal duplication of code.
 
-1. **Central control** — external CSS is centrally controlled by UX developers, and the look and feel are dictated by the design system.
+3. **Central control** — external CSS is centrally controlled by UX developers, and the look and feel are dictated by the design system.
 
-1. **Better SEO** — With clean HTML markup your [content to markup](//www.siteguru.co/free-seo-tools/text-to-html-ratio) ratio is significantly higher.
+4. **Better SEO** — With clean HTML markup your [content to markup](//www.siteguru.co/free-seo-tools/text-to-html-ratio) ratio is significantly higher.
 
-1. **Timeless skills and products** — CSS is a web standard. You'll learn universal skills that stand the test of time. There is zero risk for technical debt.
+5. **Timeless skills and products** — CSS is a web standard. You'll learn universal skills that stand the test of time. There is zero risk for technical debt.
 
 
 #### Links
-[MDN: External Stylehseets](//developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured#external_stylesheet)
+[MDN: External Stylesheets](//developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured#external_stylesheet)
 
 
 ## Form follows function { #fff }
@@ -243,7 +242,7 @@ One killer feature of in external CSS is the ability to use the same markup, but
 **Form follows function** is a principle of design associated with late 19th- and early 20th-century industrial design, which states that the shape of a product should primarily relate to its intended function or purpose. Global design system together with external CSS is the perfect demonstration of this principle on a modern web stack.
 
 #### Links
-* [Bootcamp: Form follows Function](//bootcamp.uxdesign.cc/form-follows-function-48239b5cc19e)
+- [Bootcamp: Form follows Function](//bootcamp.uxdesign.cc/form-follows-function-48239b5cc19e)
 
 
 ## Prefer standard HTML { #html }
@@ -256,7 +255,7 @@ Standard HTML helps you avoid *component overload* — a situation where you are
 ## Avoid CSS reset libraries
 Avoid CSS reset libraries. They just add extra complexity and baggage and very little value. First, you set everything to zero and then reset it to something you desire. It's better to only implement what's included in your design system and that's all you need. The only CSS reset you need is this:
 
-```
+```css
 *, *::before, *::after {
   box-sizing: border-box
 }
@@ -282,16 +281,16 @@ A much better solution is to respect constraints and centralize your CSS for dev
 ## Prefer CSS over JavaScript
 Modern CSS is surprisingly powerful. Things that used to require JavaScript can now be expressed with nothing but CSS:
 
-* Popover menus
-* Scroll linked animations
-* Smooth scrolling
-* View transitions
+- Popover menus
+- Scroll linked animations
+- Smooth scrolling
+- View transitions
 
 Check [motion and reactivity](reactivity.html) for details.
 
 
 ## Learn modern CSS
-There is tons of [misinformation](/blog/tailwind-misinformation-engine/) around CSS that attracts beginner developers to move away from web standards and adopt the idea of inline styling.
+There are tons of [misinformation](/blog/tailwind-misinformation-engine/) around CSS that attracts beginner developers to move away from web standards and adopt the idea of inline styling.
 
 But if you gasp the power of the global design system and see how you can do the same thing with significantly less effort you begin to think why you ever bought the idea of tight coupling.
 
@@ -299,9 +298,9 @@ Harness the power of constraints, design systems, and web standards. Become grea
 
 
 #### Inspiration:
-* [Ahmad Shadeed](//ishadeed.com/)
-* [Chris Coyier](//chriscoyier.net/)
-* [CSS tricks](//css-tricks.com/)
-* [Josh Comeau](//www.joshwcomeau.com/)
-* [Ryan Mulligan](//ryanmulligan.dev/blog/)
+- [Ahmad Shadeed](//ishadeed.com/)
+- [Chris Coyier](//chriscoyier.net/)
+- [CSS tricks](//css-tricks.com/)
+- [Josh Comeau](//www.joshwcomeau.com/)
+- [Ryan Mulligan](//ryanmulligan.dev/blog/)
 

@@ -25,4 +25,4 @@ This website works with the dev- branch of Nue. Just clone the repository and ru
 ### Work in progress
 The website is very much in progress. Still tons of work under the documentation area. The layout, CSS, and JS structure is likely going to change, but it's already pretty nice, clear, and minimalistic.
 
-Estimated release is on July (2024). Nue itself is mostly fine tuning and bug fixing. Once released, the version number will be `Nue 1.0 alpha`.
+Estimated release is on July (2024). Nue itself is mostly fine-tuning and bug fixing. Once released, the version number will be `Nue 1.0 alpha`.

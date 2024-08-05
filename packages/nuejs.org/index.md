@@ -1,4 +1,3 @@
-
 ---
 section_classes: [hero, feature-area, project-status, feedback]
 section_component: scroll-transition
@@ -29,7 +28,6 @@ What used to take a separate designer, React engineer, and an absurd amount of J
 
 
 [.features]
-
   ### Rapid UX development
   No JavaScript ecosystem in your way
 
@@ -162,7 +160,7 @@ Be the first to know when the official 1.0 release, templates, and the cloud stu
 
   - user: ctrlzkids
     text: Insanely impressive. Well done 👏
-    url: https://www.reddit.com/r/vuejs/comments/16ifij7/comment/k0jhbyl/?utm_source=reddit&utm_medium=web2x&context=3
+    url: //www.reddit.com/r/vuejs/comments/16ifij7/comment/k0jhbyl/?utm_source=reddit&utm_medium=web2x&context=3
     from: reddit
 
   - user: en_ka8

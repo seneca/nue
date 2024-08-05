@@ -1,4 +1,3 @@
-
 ---
 title: Nue and CSS
 hero_title: "*Nue and CSS:* a more obvious approach to styling things"
@@ -7,7 +6,7 @@ og: /img/nue-css-og.png
 date: 2024-03-20
 ---
 
-Here's a preview of Nue's upcoming approach to styling things on the web. The key difference is _minimalism_: you can build an entire website with the same amount of CSS that goes into a single **Tailwind** button. Or even crazier: you can fit three websites to a single **Tailwind Catalyst** button.
+Here's a preview of Nue's upcoming approach to styling things on the web. The key difference is *minimalism*: you can build an entire website with the same amount of CSS that goes into a single **Tailwind** button. Or even crazier: you can fit three websites to a single **Tailwind Catalyst** button.
 
 [image.hero]
   small: /img/nue-css-hero.webp
@@ -62,7 +61,7 @@ Today, JavaScript/React developers are responsible for everything. The component
 
 Things that used to be separate, are now under the responsibility of a JavaScript developer. It's hard or impossible for content creators, designers, and CSS developers to participate.
 
-The talent is inefficiently spread when React developers work on issues outside of their interests. Engineers are not necessarily the best designers and many of them *hate* CSS.
+The talent is inefficiently spread when React developers work on issues outside their interests. Engineers are not necessarily the best designers and many of them *hate* CSS.
 
 Your team could do so much better.
 
@@ -70,7 +69,7 @@ Your team could do so much better.
 
 
 ## What if...
-What if we could break away from all these tradeoffs?
+What if we could break away from all these trade-offs?
 
 Start building websites that look perfect inside out. Where your codebase is ordeer of magnitude smaller and is made out of clean, simple components.
 
@@ -78,7 +77,7 @@ What if we get all the benefits of CSS-in-JS, but none of the problems? No troub
 
 What if we could offload the burden from JavaScript developers and hand all design/UX work to people who are the absolute masters of that craft?
 
-What would _that_ look like?
+What would *that* look like?
 
 
 
@@ -112,9 +111,9 @@ The design is separated from the HTML structure so that the system can be contro
 
 
 ## 2. Minimalistic way to write vanilla CSS { #minimalism }
-Nue has it's own [CSS best practises](/docs/css-best-practices.html) for writing clear and easy-to-maintain CSS. One of the key ideas is to leave out all class names that relate to styling and let external CSS take care of the element and/or component look and feel:
+Nue has its own [CSS best practices](/docs/css-best-practices.html) for writing clear and easy-to-maintain CSS. One of the key ideas is to leave out all class names that relate to styling and let external CSS take care of the element and/or component look and feel:
 
-```
+```html
 <!-- component name is all naming you need -->
 <div class="gallery">
   <figure>

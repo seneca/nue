@@ -11,13 +11,13 @@ After describing your headers and footers, the default page layout for Markdown 
 
 To see this in practice lets create an `index.md` file with the following content:
 
-``` md
+```md
 # Hello, World!
 ```
 
 This will generate the following HTML:
 
-```
+```html
 <!DOCTYPE html>
 
 <html lang="en-US" dir="ltr">
@@ -45,21 +45,21 @@ This will generate the following HTML:
 </html>
 ```
 
-This forms the basis for our markup, which has no styling information included in any format: not in the style attribute, nor class name attribute. This is the core idea of the global design system: you'll get a _headless_ markup that you can style in different ways.
+This forms the basis for our markup, which has no styling information included in any format: not in the style attribute, nor class name attribute. This is the core idea of the global design system: you'll get a *headless* markup that you can style in different ways.
 
 
 
 #### The head element
-The contents of your head element are auto-generated based on your [settings](settings.html) and [project structure](project-structure.html). For example, if you have the files `hello.css` and `hello.js` on your project root and  a `site.yaml` file with the following data:
+The contents of your head element are auto-generated based on your [settings](settings.html) and [project structure](project-structure.html). For example, if you have the files `hello.css` and `hello.js` on your project root and a `site.yaml` file with the following data:
 
-``` yaml
+```yaml
 favicon: /favicon.png
 description: A Nue demo
 ```
 
 Your head element will be rendered as follows:
 
-```
+```html
 <head>
   <!-- user data -->
   <title>Hello, World!</title>
@@ -84,16 +84,16 @@ Nue offers a simple, [YAML-based syntax](#nav-syntax) for defining all the site-
 
 1. It always produces the same markup across projects that you can rely on when styling your website. This adapts to the idea of the global design system.
 
-1. You can define your information architecture and start the CSS development immediately without going deep with the content.
+2. You can define your information architecture and start the CSS development immediately without going deep with the content.
 
-1. It's easy to define new localized versions of your site by providing a different YAML file to override and extend the default locale. Note: this kind of localization is not supported yet, but will be in the future.
+3. It's easy to define new localized versions of your site by providing a different YAML file to override and extend the default locale. Note: this kind of localization is not supported yet, but will be in the future.
 
 
 
 ### Global header
 Let's add a global header to our document. This happens with a `header` property in the `site.yaml` file:
 
-``` yaml
+```yaml
 header:
   Master navigation:
     - Documentation: /docs/
@@ -104,7 +104,7 @@ header:
 
 Now our website has a new `header` element nested directly under the `body`. It has the following layout:
 
-```
+```html
 <body>
 
   <!-- global header for all the pages -->
@@ -125,7 +125,7 @@ Now our website has a new `header` element nested directly under the `body`. It 
 The YAML syntax allows you to build navigation elements of any complexity. This website, for example, uses the following data for the header:
 
 
-``` yaml
+```yaml
 header:
   Branding:
     - image: /img/logo.svg
@@ -155,7 +155,7 @@ header:
 
 This generates three `<nav/>` elements inside the header:
 
-```
+```html
 <header>
   <nav aria-label="Branding">...</nav>
   <nav aria-label="Site navigation">...</nav>
@@ -167,7 +167,7 @@ This generates three `<nav/>` elements inside the header:
 ### Burger menu { #burger }
 Next, we add a "burger menu" to our application by adding a `burger_menu` property to the `site.yaml` file. We use the same [syntax](#nav-syntax) as we used for the header. For example:
 
-``` yaml
+```yaml
 burger_menu:
   - Home: /home/
   - Docs: /docs/
@@ -176,7 +176,7 @@ burger_menu:
 
 This will add a menu trigger element under the global header.
 
-```
+```html
 <header>
   <nav aria-label="master_navigation">...</nav>
 + <button popovertarget="menu"></button>
@@ -185,7 +185,7 @@ This will add a menu trigger element under the global header.
 
 The actual popover menu is added to the end of the document body:
 
-```
+```html
 <body>
   <main>
     ...
@@ -209,7 +209,7 @@ Now we have an easily customizable menu that is compatible with the standard [Po
 ### Global footer
 The global footer is defined similarly with a `footer` property in `site.yaml`. We'll add the following in there:
 
-``` yaml
+```yaml
 footer:
   Branding:
     - image: /img/logo.svg
@@ -233,7 +233,7 @@ footer:
 
 Now our website has a global footer element right after the `main` element. It has the following layout:
 
-```
+```html
 <footer>
   <nav aria-label="Branding">
     <a href="/">
@@ -264,7 +264,7 @@ Now our website has a global footer element right after the `main` element. It h
 ## Navigation syntax { #nav-syntax }
 Here is the basic syntax for defining navigational elements:
 
-``` yaml
+```yaml
 Navi title:
   - Link 1 label: /first/link
   - Link 2 label: /second/link "badge"
@@ -273,7 +273,7 @@ Navi title:
 
 This generates the following HTML:
 
-```
+```html
 <nav aria-label="Navi title">
   <a href="/first/link">Link 1 label</a>
   <a href="/second/link" class="badge">Link 2 label</a>
@@ -284,7 +284,7 @@ This generates the following HTML:
 #### Nav items
 The individual items can be images, horizontal lines, links with extra properties, or just plain text:
 
-``` yaml
+```yaml
 Rich navigation:
   - image: /img/logo.png
     size: 100 x 30
@@ -304,7 +304,7 @@ Rich navigation:
 
 The above generates this:
 
-```
+```html
 <nav aria-label="Rich navigation">
   <a href="/">
     <img src="/img/logo.png" width="100" height="30" alt="The logo">
@@ -320,7 +320,7 @@ The above generates this:
 ### Categorized navi
 Categorized navigations are typically used in the global footer and in any sidebar you may have. You can define them as follows:
 
-``` yaml
+```yaml
 Categories:
   Category 1:
     - Label: /link
@@ -334,7 +334,7 @@ Categories:
 This will generate the following:
 
 
-```
+```html
 <div aria-label="Categories">
   <nav>
     <h3>Category 1</h3>
@@ -355,7 +355,7 @@ This will generate the following:
 Dropdown menus can be defined as follows
 
 
-``` yaml
+```yaml
 Navigation:
   - Docs: /docs/
   - Blog: /blog/
@@ -370,7 +370,7 @@ Navigation:
 This will generate the following:
 
 
-```
+```html
 <nav aria-label="Navigation">
   <a href="/docs/">Docs</a>
   <a href="/blog/">Blog</a>
@@ -397,7 +397,7 @@ The standard [aria-haspopup](//developer.mozilla.org/en-US/docs/Web/Accessibilit
 Nue [extends](content.html) the basic Markdown syntax to make it suitable for assembling rich web pages. This content is nested inside an `article` element:
 
 
-```
+```html
 <body>
   <main>
     <article>
@@ -413,7 +413,7 @@ Nue [extends](content.html) the basic Markdown syntax to make it suitable for as
 ### Sections
 The content is always nested inside one or more section elements. A multi-section HTML output looks like this:
 
-```
+```html
 <article>
 
 > <section>
@@ -439,7 +439,7 @@ The `section` elements are direct descendants of the article and cannot occur an
 You typically want to define classes for the sections for styling purposes. These classes (and IDs) can be defined explicitly after the section separator. For example:
 
 
-``` md
+```md
 \--- •#my-id.class-name•
 
 # Section title
@@ -448,7 +448,7 @@ And a description
 
 This will generate the following:
 
-```
+```html
 <article>
   <section id="ux" class="features">...</section>
   ...
@@ -457,7 +457,7 @@ This will generate the following:
 
 However, it's better to define these classes in the application data or the document's front matter. For example, the [front page](/) of this website has the following:
 
-```
+```yaml
 sections: [hero, features, explainer, status, feedback]
 ```
 
@@ -467,7 +467,7 @@ Defining the classes outside the Markdown keeps the content clean and raises few
 ### Blocks
 Content authors can write [blocks of content](content.html#blocks) with class names that are part of your design system:
 
-```
+```html
 <div class="note">
   <h2>Note</h2>
   <p>Web design is 100% content and 95% typography</p>
@@ -480,7 +480,7 @@ Common class names to implement on your CSS are "note", "warning", "alert", or "
 ### Flex layouts
 Content writers can create content blocks with nested items so that they form a [flex layout](//developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox). For example:
 
-```
+```html
 <div class="flexbox">
 
   <!-- first item -->
@@ -503,7 +503,7 @@ Depending on the semantics of your design system, the container can have a gener
 ### Grid layouts
 [Grid](tags.html#grid) is a built-in Markdown extension for more complex [gird layouts](//developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids). It's like a flex box but allows you to set up class names for the individual items, and you can make the items [reactive](reactivity.html#web-components) by turning them into Web Components.
 
-```
+```html
 <div class="grid">
 
   <!-- first item -->
@@ -529,7 +529,7 @@ Depending on the semantics of your design system, the container can have a gener
 ### Grid items
 You can configure class names and a [web component instance](reactivity.html#grid-items) for your grid items:
 
-```
+```yaml
 grid_item_class: card
 grid_item_component: gallery-item
 ```
@@ -541,7 +541,7 @@ While you can also set up these properties directly on the grid tag, it's better
 ### Markdown generated HTML
 Markdown content can reside within sections, blocks, and grid items. The generated HTML is restricted to: `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `strong`, `em`, `a`, `ul`, `li`, `blockquote`, and `code`.
 
-The design of these tags should be [context-specific](css-best-practices.html#fff). For example, technical content is typically styled differently than marketing content.
+The design of these tags should be [context-specific](css-best-practices.html#fff). For example, technical content is typically styled different from marketing content.
 
 
 ## Built-in tags
@@ -550,7 +550,7 @@ The design of these tags should be [context-specific](css-best-practices.html#ff
 ### Button
 Buttons are rendered as follows:
 
-```
+```html
 <a role="button" href="/docs/">Learn more</a>
 ```
 
@@ -562,7 +562,7 @@ Design systems commonly have different styles for primary and secondary buttons 
 ### Image
 Images are rendered as follows:
 
-```
+```html
 <figure>
   <img src="hello.webp" loading="lazy">
 </figure>
@@ -570,27 +570,27 @@ Images are rendered as follows:
 
 They can have captions:
 
-```
+```html
 <figure>
   <img src="less.webp" loading="lazy">
-  <figcaption>Less is More</figcaption
+  <figcaption>Less is More</figcaption>
 </figure>
 ```
 
 They can be nested inside a link:
 
-```
+```html
 <a href="/docs/">
   <figure>
     <img src="book.svg" loading="lazy">
-    <figcaption>View documentation</figcaption
+    <figcaption>View documentation</figcaption>
   </figure>
 </a>
 ```
 
-They can be [responsive](//developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+They can be [responsive](//developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images):
 
-```
+```html
 <figure>
   <img
     srcset="planet.png 450w, planet-big.png 900w"
@@ -603,7 +603,7 @@ They can be [responsive](//developer.mozilla.org/en-US/docs/Learn/HTML/Multimedi
 
 [Art direction](//web.dev/articles/codelab-art-direction) is supported:
 
-```
+```html
 <figure>
   <picture>
     <source src="ui-tall.png" media="(max-width: 750px)" type="image/png">
@@ -615,7 +615,7 @@ They can be [responsive](//developer.mozilla.org/en-US/docs/Learn/HTML/Multimedi
 
 They can use classes from your design system:
 
-```
+```html
 <figure class=•"heroic"•>
   <img src="hello.webp" loading="lazy">
 </figure>
@@ -625,7 +625,7 @@ They can use classes from your design system:
 ### Video
 Videos are rendered as a native HTML5 video element:
 
-```
+```html
 <video class="heroic" width="1000" poster="hello.png">
   <source src="hello.webm" type="video/webm">
   <source src="hello.mp4" type="video/mp4">
@@ -636,7 +636,7 @@ Videos are rendered as a native HTML5 video element:
 ### Tables
 Tables are rendered as standard HTML:
 
-```
+```html
 <table>
   <thead>
     <tr>
@@ -670,7 +670,7 @@ Tables are rendered as standard HTML:
 Tabbed layouts are rendered with the standard [tablist](//developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) and [tabpanel](//developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) roles:
 
 
-```
+```html
 <div class="tabs" is="aria-tabs">
 
   <div role="tablist">
@@ -705,7 +705,7 @@ Nue uses the "aria-tabs" web component to implement the show/hide behavior for t
 ## Code
 Nue has built-in support for [syntax highlighting](syntax-highlighting.html) in the Markdown fenced code blocks. They are rendered as follows:
 
-```
+```html
 <pre>
   <code language="typescript">
     <sup>// a comment</sup>
@@ -717,7 +717,7 @@ Nue has built-in support for [syntax highlighting](syntax-highlighting.html) in 
 
 Code blocks with a title are rendered as follows:
 
-```
+```html
 <figure>
   <figcaption>
     Title of the codeblock <b>with formatting</b>
@@ -735,7 +735,7 @@ Code blocks with a title are rendered as follows:
 ### Multi-code blocks
 Multiple code blocks can be nested inside a single parent element:
 
-```
+```html
 <div class="my-class-for-multiblocks">
   <figure>...</figure>
   <figure>...</figure>
@@ -746,7 +746,7 @@ Multiple code blocks can be nested inside a single parent element:
 ### Code tabs
 Multiple code blocks can be tabbed so that a maximum of one code block is visible at once:
 
-```
+```html
 <div class="tabs" is="aria-tabs">
 
   <div role="tablist">
@@ -770,7 +770,7 @@ The implementation is similar to standard [tabs](#tabs), but the markup is plain
 Tables, code blocks, and tabs can be nested inside a wrapper element to allow more visual design around the element:
 
 
-```
+```html
 <div class="•gradient-wrap•">
   <table>
     ...

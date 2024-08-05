@@ -20,7 +20,7 @@ With Nue, you can use the same development approach to build both content-heavy 
 
 
 ## Separation of concerns
-Today, the codebases single-page applications are enormous. It's not unusual to see projects with hundreds, even thousands of JavaScript components where the markup, styling, and logic are mixed together forming a massive canvas of "spaghetti code". Projects like **Vite** are specifically built to solve the issues that come with with these massive component-heavy codebases.
+Today, the codebases single-page applications are enormous. It's not unusual to see projects with hundreds, even thousands of JavaScript components where the markup, styling, and logic are mixed together forming a massive canvas of "spaghetti code". Projects like **Vite** are specifically built to solve the issues that come with these massive component-heavy codebases.
 
 Nue is different. It splits you codebase in two: the application and the user interface. This split makes a big difference in how you code looks:
 

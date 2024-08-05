@@ -14,10 +14,10 @@ UX development starts by understanding your audience and figuring out where to t
 This process varies from a large team effort to a simple README file on a local file system. The more you know about your content, the better equipped you are for the next step: design.
 
 #### More info
-* [Steve Jobs: Start with the customer experience](//surveypal.com/blog/steve-jobs-said-it-best-start-with-the-customer-experience/)
-* [Balsamiq: Content-First Design](//balsamiq.com/learn/articles/content-first-design/)
-* [PixelFridge: The benefits of a content-first approach](//www.pixelfridge.digital/the-benefits-of-a-content-first-approach/)
-* [UX Planet: Information Architecture Design](//uxplanet.org/information-architecture-design-a-step-by-step-guide-41dcd4405ee3)
+- [Steve Jobs: Start with the customer experience](//surveypal.com/blog/steve-jobs-said-it-best-start-with-the-customer-experience/)
+- [Balsamiq: Content-First Design](//balsamiq.com/learn/articles/content-first-design/)
+- [PixelFridge: The benefits of a content-first approach](//www.pixelfridge.digital/the-benefits-of-a-content-first-approach/)
+- [UX Planet: Information Architecture Design](//uxplanet.org/information-architecture-design-a-step-by-step-guide-41dcd4405ee3)
 
 
 
@@ -35,9 +35,9 @@ The size and format of your design system vary a lot depending on the size of yo
 One-person projects can implement the design system directly with HTML and CSS, because that's what you eventually end up doing. This takes you one step closer to the finish line.
 
 #### More info:
-* [Figma: What is a design system?](//www.figma.com/blog/design-systems-101-what-is-a-design-system/)
-* [The Design System Guide](//thedesignsystem.guide/)
-* [Figma: Marketing of design systems](//www.figma.com/blog/the-future-of-design-systems-is-marketing/)
+- [Figma: What is a design system?](//www.figma.com/blog/design-systems-101-what-is-a-design-system/)
+- [The Design System Guide](//thedesignsystem.guide/)
+- [Figma: Marketing of design systems](//www.figma.com/blog/the-future-of-design-systems-is-marketing/)
 
 
 ## 3. Convert it to CSS
@@ -63,7 +63,7 @@ Once the basics of designs are implemented you can enhance the experience with [
 
 Nue brings reactivity to the hands of UX developers, who can now implement advanced dynamics directly with CSS and small snippets of JavaScript. Things like view transitions and scroll-triggered animations are nothing but modern CSS:
 
-```
+```css
 /* view transition: scale down the "old" page */
 ::view-transition-old(root) {
   transform: scale(.8);
@@ -89,13 +89,12 @@ There are two ways to pass the website to your customers:
 
 Something like the following would do the job in the Sublime preferences:
 
-```
+```yaml
 # exclude all folders that are meant for developers
 folder_exclude_patterns: [ "@global", "@lib" ]
 
 # only include files related to content management
 file_include_patterns: [ "*.md", "*.yaml" ]
-
 ```
 
 [.note]

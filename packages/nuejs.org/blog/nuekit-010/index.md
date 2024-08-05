@@ -1,4 +1,3 @@
-
 ---
 date: 2023-12-14
 og: /img/nuekit-hero-big.jpg
@@ -35,11 +34,11 @@ Use the same simple syntax and development model for content-focused websites or
 [image]
   small: /img/simple-blog.png
   large: /img/simple-blog-big.png
-  href: /@simple-blog
+  href: /@simple-blog # TODO: fix
   width: 650
 
-Build a simple blog: [Tutorial](/docs/tutorials/build-a-simple-blog.html) /
-[Live demo](/@simple-blog) /
+Build a simple blog: [Tutorial](/docs/tutorials/build-a-simple-blog.html)<!--TODO: fix--> /
+[Live demo](/@simple-blog)<!--TODO: fix--> /
 [Source code](//github.com/nuejs/create-nue/tree/master/simple-blog)
 
 &nbsp;
@@ -47,17 +46,17 @@ Build a simple blog: [Tutorial](/docs/tutorials/build-a-simple-blog.html) /
 [image]
   small: /img/simple-spa.png
   large: /img/simple-spa-big.png
-  href: /@simple-admin
+  href: /@simple-admin # TODO: fix
   width: 650
 
-Build a simple SPA: [Tutorial](/docs/tutorials/build-a-simple-spa.html) /
-[Live demo](/@simple-admin) /
-[Source code](//github.com/nuejs/create-nue/tree/master/simple-app)
+Build a simple SPA: [Tutorial](/docs/tutorials/build-a-simple-spa.html)<!--TODO: fix--> /
+[Live demo](/@simple-admin)<!--TODO: fix--> /
+  [Source code](//github.com/nuejs/create-nue/tree/master/simple-app)
 
 
 
 ## Significantly faster build times { #faster }
-Nue is in order of magnitude faster than its cousins. An identical blogging site takes around *50ms* to build with Nuekit and over _ten seconds_ with Next.js:
+Nue is an order of magnitude faster than its cousins. An identical blogging site takes around *50ms* to build with Nuekit and over *ten seconds* with Next.js:
 
 [bunny-video]
   videoId: 45b73e3a-3edd-47af-bcd8-49039496b107
@@ -75,7 +74,7 @@ Nue is in order of magnitude faster than its cousins. An identical blogging site
 
 
 ### New, beautiful documentation area
-With lots of explainer images and -videos:
+With lots of explainer-images and -videos:
 
 [image]
   small: /img/docs.png
@@ -87,7 +86,7 @@ With lots of explainer images and -videos:
 ## Get started
 Starting a new project in Nue is easy:
 
-``` sh
+```sh
 # Install Nue globally for all your sites and apps
 bun install nuekit --global
 
