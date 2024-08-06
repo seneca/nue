@@ -4,7 +4,7 @@ include: [syntax-table]
 ---
 
 # Syntax highlighting
-Nue uses automatically highlights syntax blocks with [Glow](/blog/introducing-glow/). It's a classless and fully semantic library that is specifically designed to work well with the global design system.
+Nue uses [Glow](/blog/introducing-glow/) to automatically highlights syntax blocks in your pages. It's a classless and fully semantic library that is specifically designed to work well with the global design system.
 
 
 ## Styling syntax blocks
@@ -25,7 +25,7 @@ Syntax blocks consist of standard HTML tags only and there are no class names. F
 
 
 ### Built-in stylesheet
-Whenever you add a syntax blog or a [code tag](tags.md#code) on your page, Nue automatically includes a [stylesheet](//github.com/nuejs/nue/blob/dev/packages/glow/css/dark.css) for syntax highlighting. It is a highly configurable system based on CSS variables. For example:
+Whenever you add a syntax blog or a [code tag](tags.md#code) to your page, Nue automatically includes a [stylesheet](//github.com/nuejs/nue/blob/dev/packages/glow/css/dark.css) for syntax highlighting. It is a highly configurable system based on CSS variables. For example:
 
 ```
 /* setting glow variables */
@@ -71,7 +71,7 @@ Here's a list of all CSS variables and the associative HTML elements on a syntax
 
 * When line numbers are enabled, each line is wrapped inside a `span` element, and the `--glow-line-number` variable is attached to the `span:before` pseudo-element.
 
-* Highlighted rows are colored with a comma-comma-separated list of RGB values so that they can be manipulated with CSS color functions. These colors represent the bright border color on the left edge of the highlighted line, and the line background color is calculated with the RGB values and the `--glow-line-opacity` variable. Setting a value such as `rgb(1, 2, 3)` won't work.
+* Highlighted rows are colored with a comma-separated list of RGB values so that they can be manipulated with CSS color functions. These colors represent the bright border color on the left edge of the highlighted line, and the line background color is calculated with the RGB values and the `--glow-line-opacity` variable. Setting a value such as `rgb(1, 2, 3)` won't work.
 
 
 ### Language-specific styling
@@ -83,8 +83,8 @@ Use the `language` attribute for language-specific CSS tweaks:
 }
 ```
 
-### Bolding, italics, and other formatting
-By default glow uses bolding only together with `--glow-special-color`. Other than that all elements have no formatting, just color assignments. You can, of course, make any softs of CSS tweaks to fine-tune syntax blocks. For example:
+### Bold, italics and other formatting
+By default glow uses bold only together with `--glow-special-color`. Other than that, all elements have no formatting, just color assignments. You can, of course, make any sorts of CSS tweaks to fine-tune syntax blocks. For example:
 
 ```
 /* bold all secondary syntax elements */
@@ -92,5 +92,3 @@ pre {
   em { font-weight: bold }
 }
 ```
-
-
